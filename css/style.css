@@ -14,11 +14,9 @@
   font-weight: 700;
   font-style: normal;
 }
+/* fonts end */
 
-body {
-  background-color: lightgreen;
-}
-
+/* navbar start */
 ul {
   list-style-type: none;
   margin: 0;
@@ -43,12 +41,22 @@ ul li a {
 ul li a:hover {
   background-color: #111;
 }
+/* navbar end */
 
-.col:hover {
-  background-color: #111;
+/* Andrei G sectio start */
+body {
+  background-color: lightgreen;
 }
 
-.col {
-  /* border: 4px solid #333; */
-  background-color: #333;
+.ag_col:hover {
+  /* background-color: #111; */
 }
+
+.ag_col {
+  border: 4px solid #333;
+  /* background-color: #333; */
+}
+/* Andrei G section end */
+
+/* Derek K sectio start */
+/* Derek K section end */
