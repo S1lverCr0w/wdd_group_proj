@@ -20,10 +20,13 @@
 .navbar{
   /* background-color: #333; */
   /* data-bs-theme="dark" */
+  text-align: center;
+  margin-bottom: 0.8em;
 }
 
 .navBtn {
   /* background-color: #333; */
+  color: #fff;
   margin: 0;
   padding: 0;
   /* padding: 14px 16px; */
@@ -77,6 +80,7 @@ ul li a:hover {
   background-color: #111;
 }
 
+/* obsolete section start */
 @media screen and (min-width: 992px) {
   .navbarr {
     margin-bottom: 0.8em;
@@ -104,6 +108,7 @@ ul li a:hover {
     float: left;
   }
 }
+/* obsolete section end */
 /* navbar end */
 
 /* Andrei G sectio start */
