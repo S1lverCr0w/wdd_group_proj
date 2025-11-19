@@ -1,15 +1,28 @@
 /* style.css */
 
 /* google fonts */
-.jetbrains {
-  font-family: "JetBrains Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 600;
+/* .jetbrains { */
+/*   font-family: "JetBrains Mono", monospace; */
+/*   font-optical-sizing: auto; */
+/*   font-weight: 600; */
+/*   font-style: normal; */
+/* } */
+/**/
+/* .monda { */
+/*   font-family: "Monda", sans-serif; */
+/*   font-optical-sizing: auto; */
+/*   font-weight: 700; */
+/*   font-style: normal; */
+/* } */
+
+.font-bartle {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
-.monda {
-  font-family: "Monda", sans-serif;
+.font-roboto {
+  font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
