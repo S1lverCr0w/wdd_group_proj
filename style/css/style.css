@@ -35,7 +35,8 @@
 }
 
 .navBtn:hover {
-  background-color: #2b3035;
+  color: #fff;
+  background-color: #111;
 }
 
 ul {
@@ -60,14 +61,14 @@ ul li a {
 }
 
 ul li a:hover {
-  background-color: #111;
+  /* background-color: #111; */
 }
 /* navbar end */
 
 /* Andrei G sectio start */
 body {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/background2.avif"); 
-	background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/background2.avif"); 
+  background-size: cover;
  /* background-color: lightgreen; */
 }
 
@@ -86,9 +87,9 @@ body {
   /* background-color: #333; */
 }
 
-ag_form {
-  text-align: left;
-}
+/* ag_form { */
+/*   text-align: left; */
+/* } */
 /* Andrei G section end */
 
 /* Derek o K sectio start */

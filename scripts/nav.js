@@ -9,14 +9,14 @@ var navbar = `
 				</button>
 
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<a class="nav-link active navBtn" aria-current="page" href="index.html">Home</a>
-					<a class="nav-link navBtn"  href="news.html">News</a>
-					<a class="nav-link navBtn"  href="uisceire.html">UisceIRE</a>
-					<a class="nav-link navBtn"  href="sources.html">Sources</a>
-					<a class="nav-link navBtn"  href="conservation.html">Conservation</a>
-					<a class="nav-link navBtn"  href="findus.html">Find Us</a>
-					<a class="nav-link navBtn"  href="contact.html">Contact Us</a>
-					<a class="nav-link navBtn"  href="info.html">Info</a>
+					<a class="nav-link navBtn" href="index.html">Home</a>
+					<a class="nav-link navBtn" href="news.html">News</a>
+					<a class="nav-link navBtn" href="uisceire.html">UisceIRE</a>
+					<a class="nav-link navBtn" href="sources.html">Sources</a>
+					<a class="nav-link navBtn" href="conservation.html">Conservation</a>
+					<a class="nav-link navBtn" href="findus.html">Find Us</a>
+					<a class="nav-link navBtn" href="contact.html">Contact Us</a>
+					<a class="nav-link navBtn" href="info.html">Info</a>
 				</div>
 			</div>
 		</nav>`;
