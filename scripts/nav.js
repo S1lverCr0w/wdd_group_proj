@@ -1,14 +1,18 @@
 // all worked on navbar development
 // Tristan, Alex, Derek, Andrei
 var navbar = `
+		<!-- bootstrap navbar -->
 		<nav class="navbar navbar-expand-lg">
 			<div class="container-fluid">
+				<!-- branding -->
 				<a class="navbar-brand"  href="index.html">Group G</a>
+				<!-- hamburger menu -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<!-- buttons in compact form -->
 					<a class="nav-link navBtn" href="index.html">Home</a>
 					<a class="nav-link navBtn" href="news.html">News</a>
 					<a class="nav-link navBtn" href="uisceire.html">UisceIRE</a>
