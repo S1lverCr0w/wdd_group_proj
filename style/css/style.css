@@ -163,6 +163,13 @@ body {
   z-index: 1000;
 }
 
+.ag_center {
+/* button { */
+  /* margin: 0 auto; */
+  /* display: block; */
+  text-align: center;
+}
+
 /* Andrei G section end */
 
 

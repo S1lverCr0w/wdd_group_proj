@@ -16,14 +16,23 @@ function insert_pop_up() {
 			<br>
 			<input type="password" id="ag_passwd" name="ag_passwd" placeholder="passsword">
 			<br>
+			<span id="login_error" class="error_message"></span>
 			<br>
-			<button onclick="log_in();">Log in</button>
-			<button onclick="hide_pop_up();">Cancel</button>
+			<div class="ag_center">
+				<button onclick="log_in();">Log in</button>
+				<button type="reset" onclick="hide_pop_up();">Cancel</button>
+			</div>
 		</div>
 		`;
 
 	document.body.insertAdjacentHTML("afterbegin", pop_up_html);
 	hide_pop_up();
+}
+
+
+function hide_pop_up() {
+	document.getElementById("overlay").style.display = "none";
+	document.getElementById("pop_up").style.display = "none";
 }
 
 
@@ -35,11 +44,6 @@ function pop_up() {
 
 function log_in() {
 	hide_pop_up();
-}
-
-function hide_pop_up() {
-	document.getElementById("overlay").style.display = "none";
-	document.getElementById("pop_up").style.display = "none";
 }
 
 
