@@ -77,13 +77,14 @@ function validate_form() {
 	passwd_error.textContent = "";
 	rpasswd_error.textContent = "";
 	agree_error.textContent = "";
+	// hide_error();
 
 	let form_validity = true;
 
-	if (username == "" || username.length < 3) {
-		username_error.textContent = "Please enter a valid username.";
-		form_validity = false;
-	}
+	// if (username == "" || username.length < 3) {
+	// 	username_error.textContent = "Please enter a valid username.";
+	// 	form_validity = false;
+	// }
 
 	if (fname == "" || fname.length < 3) {
 		fname_error.textContent = "Please enter a valid name.";
@@ -91,12 +92,12 @@ function validate_form() {
 	}
 
 	if (lname == "" || lname.length < 3) {
-		occupation_error.textContent = "Please enter a valid surname.";
+		lname_error.textContent = "Please enter a valid surname.";
 		form_validity = false;
 	}
 
 	if (occupation == "") {
-		occupation_error.textContent = "Please select your occupation.";
+		occupation_error.textContent = "Please choose a occupation.";
 		form_validity = false;
 	}
 
@@ -115,7 +116,7 @@ function validate_form() {
 		form_validity = false;
 	}
 
-	if (rpasswd == "" || rpasswd.length < 6) {
+	if (rpasswd == "" || rpasswd != passwd) {
 		rpasswd_error.textContent = "Passwords don't match.";
 		form_validity = false;
 	}
@@ -126,6 +127,7 @@ function validate_form() {
 	}
 
 	if (form_validity) {
+		save_data();
 		alert("Your account has been created! \n\nYou can now log in with your username and password.")
 		return true;
 	} else {
@@ -134,8 +136,24 @@ function validate_form() {
 }
 
 
+function save_data() {
+}
 
 
+const error_list = ["error_message01", "error_message02", "error_message03",
+					"error_message04", "error_message05", "error_message06",
+					"error_message07", "error_message08", "error_message09"];
+
+function hide_error() {
+	for (let i = 0; i < error_list.length; ++i) {
+		document.getElementById(error_list[i]).style.display = "none";
+	}
+}
+
+
+
+
+// useless shtuff
 var sUserName,
 	targetElementMessage,
 	targetElementLogin,
