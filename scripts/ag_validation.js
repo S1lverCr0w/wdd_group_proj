@@ -1,25 +1,45 @@
 // andrei form validation script
 // public variable declaration
 
-function pop_up() {
+insert_pop_up();
+
+function insert_pop_up() {
 	var pop_up_html = `
 		<div id="overlay"></div>
 		<div id="pop_up">
-			<label for="ag_fname">First Name:</label>
+			<label for="ag_username">Username:</label>
 			<br>
-			<input type="text" id="ag_fname" name="ag_fname" placeholder="Enter your first name">
+			<input type="text" id="ag_username" name="ag_username" placeholder="Enter your username">
 			<br>
 
+			<label for="ag_passwd">Password:</label>
+			<br>
+			<input type="password" id="ag_passwd" name="ag_passwd" placeholder="passsword">
+			<br>
+			<br>
+			<button onclick="log_in();">Log in</button>
+			<button onclick="hide_pop_up();">Cancel</button>
 		</div>
 		`;
 
 	document.body.insertAdjacentHTML("afterbegin", pop_up_html);
+	hide_pop_up();
+}
+
+
+function pop_up() {
 	document.getElementById("overlay").style.display = "block";
 	document.getElementById("pop_up").style.display = "block";
 }
 
 
 function log_in() {
+	hide_pop_up();
+}
+
+function hide_pop_up() {
+	document.getElementById("overlay").style.display = "none";
+	document.getElementById("pop_up").style.display = "none";
 }
 
 
