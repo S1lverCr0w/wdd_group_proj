@@ -1,19 +1,26 @@
 // andrei form validation script
 // public variable declaration
 
+function pop_up() {
+	var pop_up_html = `
+		<div id="overlay"></div>
+		<div id="pop_up">
+			<label for="ag_fname">First Name:</label>
+			<br>
+			<input type="text" id="ag_fname" name="ag_fname" placeholder="Enter your first name">
+			<br>
+
+		</div>
+		`;
+
+	document.body.insertAdjacentHTML("afterbegin", pop_up_html);
+	document.getElementById("overlay").style.display = "block";
+	document.getElementById("pop_up").style.display = "block";
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
+function log_in() {
+}
 
 
 
