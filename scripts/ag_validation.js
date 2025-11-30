@@ -1,5 +1,23 @@
 // andrei form validation script
 // public variable declaration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var sUserName,
 	targetElementMessage,
 	targetElementLogin,
