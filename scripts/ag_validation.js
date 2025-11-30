@@ -68,23 +68,14 @@ function validate_form() {
 	const rpasswd_error = document.getElementById("rpasswd_error");
 	const agree_error = document.getElementById("agree_error");
 
-	username_error.textContent = "";
-	fname_error.textContent = "";
-	lname_error.textContent = "";
-	occupation_error.textContent = "";
-	email_error.textContent = "";
-	date_error.textContent = "";
-	passwd_error.textContent = "";
-	rpasswd_error.textContent = "";
-	agree_error.textContent = "";
-	// hide_error();
+	reset_error();
 
 	let form_validity = true;
 
-	// if (username == "" || username.length < 3) {
-	// 	username_error.textContent = "Please enter a valid username.";
-	// 	form_validity = false;
-	// }
+	if (username == "" || username.length < 3) {
+		username_error.textContent = "Please enter a valid username.";
+		form_validity = false;
+	}
 
 	if (fname == "" || fname.length < 3) {
 		fname_error.textContent = "Please enter a valid name.";
@@ -140,13 +131,18 @@ function save_data() {
 }
 
 
-const error_list = ["error_message01", "error_message02", "error_message03",
-					"error_message04", "error_message05", "error_message06",
-					"error_message07", "error_message08", "error_message09"];
+// const error_list = ["error_message01", "error_message02", "error_message03",
+// 					"error_message04", "error_message05", "error_message06",
+// 					"error_message07", "error_message08", "error_message09"];
 
-function hide_error() {
+function reset_error() {
+	const error_list = ["username_error", "fname_error", "lname_error",
+						"occupation_error", "email_error", "date_error",
+						"passwd_error", "rpasswd_error", "agree_error"];
+
 	for (let i = 0; i < error_list.length; ++i) {
-		document.getElementById(error_list[i]).style.display = "none";
+		// document.getElementById(error_list[i]).style.display = "none";
+		error_list[i].textContent = "";
 	}
 }
 
