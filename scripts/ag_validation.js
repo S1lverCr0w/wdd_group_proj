@@ -47,6 +47,18 @@ function log_in() {
 }
 
 
+function validate_form() {
+	const username = document.getElementById("ag_username").value;
+	const fname = document.getElementById("ag_fname").value;
+	const lname = document.getElementById("ag_lname").value;
+	const email = document.getElementById("ag_email").value;
+	const date = document.getElementById("ag_date").value;
+	const passwd = document.getElementById("ag_passwd").value;
+	const rpasswd = document.getElementById("ag_rpasswd").value;
+	const agree = document.getElementById("ag_agree").value;
+}
+
+
 
 
 var sUserName,
