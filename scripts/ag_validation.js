@@ -9,12 +9,12 @@ function insert_pop_up() {
 		<div id="pop_up">
 			<label for="ag_username">Username:</label>
 			<br>
-			<input type="text" id="ag_username" name="ag_username" placeholder="Enter your username">
+			<input type="text" id="ag_username_l" name="ag_username" placeholder="Enter your username">
 			<br>
 
 			<label for="ag_passwd">Password:</label>
 			<br>
-			<input type="password" id="ag_passwd" name="ag_passwd" placeholder="passsword">
+			<input type="password" id="ag_passwd_l" name="ag_passwd_l" placeholder="passsword">
 			<br>
 			<span id="login_error" class="error_message"></span>
 			<br>
@@ -42,9 +42,10 @@ function pop_up() {
 }
 
 
-function log_in() {
-	hide_pop_up();
-}
+// function log_in() {
+// 	hide_pop_up();
+// }
+
 
 
 function validate_form() {
@@ -118,7 +119,10 @@ function validate_form() {
 	}
 
 	if (form_validity) {
-		save_data();
+		// save_data();
+		localStorage.setItem('user', username);
+		localStorage.setItem('password', passwd);
+
 		alert("Your account has been created! \n\nYou can now log in with your username and password.")
 		return true;
 	} else {
@@ -128,23 +132,27 @@ function validate_form() {
 
 
 function save_data() {
+	// localStorage.setItem('user', username);
+	// localStorage.setItem('password', passwd);
 }
 
 
-// const error_list = ["error_message01", "error_message02", "error_message03",
-// 					"error_message04", "error_message05", "error_message06",
-// 					"error_message07", "error_message08", "error_message09"];
+
+function hide_error() {
+	// const error_list = ["error_message01", "error_message02", "error_message03",
+	// 					"error_message04", "error_message05", "error_message06",
+	// 					"error_message07", "error_message08", "error_message09"];
+	const error_list = ["username_error", "fname_error", "lname_error",
+						"occupation_error", "email_error", "date_error",
+						"passwd_error", "rpasswd_error", "agree_error"];
+
+	for (let i = 0; i < error_list.length; ++i) {
+		document.getElementById(error_list[i]).style.display = "none";
+		// error_list[i].textContent = "";
+	}
+}
 
 function reset_error() {
-	// const error_list = ["username_error", "fname_error", "lname_error",
-	// 					"occupation_error", "email_error", "date_error",
-	// 					"passwd_error", "rpasswd_error", "agree_error"];
-	//
-	// for (let i = 0; i < error_list.length; ++i) {
-	// 	// document.getElementById(error_list[i]).style.display = "none";
-	// 	error_list[i].textContent = "";
-	// }
-
 	username_error.textContent = "";
 	fname_error.textContent = "";
 	lname_error.textContent = "";
@@ -154,6 +162,20 @@ function reset_error() {
 	passwd_error.textContent = "";
 	rpasswd_error.textContent = "";
 	agree_error.textContent = "";
+}
+
+function log_in() {
+	var user = localStorage.getItem('user');
+	var password = localStorage.getItem('password');
+
+	var user_login = document.getElementById("ag_username_l").value;
+	var password_login = document.getElementById("ag_passwd_l").value;
+
+	if (user_login == user && password_login == password) {
+		alert("log in succesful");
+
+		document.getElementById("ag_loginBtn").textContent = user;
+	}
 }
 
 
