@@ -12,12 +12,12 @@ function insert_pop_up() {
 		<div id="pop_up">
 			<label for="ag_username">Username:</label>
 			<br>
-			<input type="text" id="ag_username_l" name="ag_username" placeholder="Enter your username">
+			<input type="text" id="ag_username_l" name="ag_username" placeholder="Enter your username" size="23">
 			<br>
 
 			<label for="ag_passwd">Password:</label>
 			<br>
-			<input type="password" id="ag_passwd_l" name="ag_passwd_l" placeholder="passsword">
+			<input type="password" id="ag_passwd_l" name="ag_passwd_l" placeholder="passsword" size="23">
 			<br>
 			<span id="login_error" class="error_message"></span>
 			<br>
