@@ -41,6 +41,8 @@ function insert_pop_up() {
 function hide_pop_up() {
 	document.getElementById("overlay").style.display = "none";
 	document.getElementById("pop_up").style.display = "none";
+
+	reset_log_in_error();
 }
 
 
