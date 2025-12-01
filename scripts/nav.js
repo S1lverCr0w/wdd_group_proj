@@ -2,10 +2,10 @@
 // Tristan, Alex, Derek, Andrei
 var navbar = `
 		<!-- bootstrap navbar -->
-		<nav class="navbar navbar-expand-lg ag_navbar nav-pills" role="navigation">
+		<nav class="navbar navbar-expand-lg ag_navbar" role="navigation">
 			<div class="container-fluid">
 				<!-- branding -->
-				<a class="navbar-brand"  href="index.html">Group G</a>
+				<a class="navbar-brand"  href="index.html">Group G |</a>
 				<!-- login menu -->
 				<!-- <button class="ag_login_icon" type="button"> -->
 				<!-- 	<span class="">Log in</span> -->

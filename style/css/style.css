@@ -29,7 +29,7 @@
   margin-bottom: 0.8em;
 }
 .navbar-brand {
-	color: #A6F5C2;
+  color: #A6F5C2;
 }
 
 .navBtn {
@@ -44,7 +44,8 @@
 }
 
 .navBtn:hover {
-    background-color: #A6F5C2;
+    /* background-color: #A6F5C2; */
+    background-color: #060606;
     color: black;
 }
 
@@ -104,7 +105,7 @@ body {
 */
 /* andrei navbar customization start*/
 .ag_body nav {
-  background-color:#4b4a4a;
+  /* background-color:#4b4a4a; */
   background-color:#1e1e1e;
 }
 
@@ -112,8 +113,31 @@ body {
     background-color: #00f2ff;
 }
 
-.collapse a {
+.collapse .navBtn {
     color: #cbd8d9;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+.collapse .navBtn:hover {
+    /* background-color: #A6F5C2; */
+    background-color: #060606;
+    /* color: black; */
+}
+
+.collapse .ag_loginBtn {
+  margin-left: 2em;
+  margin-right: 2em;
+  float: right;
+  /* margin: auto; */
+  /* flex: auto; */
+  text-decoration: none;
+  text-align: center;
+}
+
+.ag_navbar .navbar-toggler {
+  background-color: #cbd8d9;
+  color: #cbd8d9;
 }
 /* andrei navbar customization end*/
 
@@ -126,6 +150,7 @@ body {
 }
 
 .ag_col {
+  /* gap: 1em; */
   border: 4px solid #333;
   /* background-color: #333; */
 }
