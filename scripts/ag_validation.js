@@ -167,6 +167,8 @@ function reset_error() {
 
 // get value from the inputs and make sure they match the values stored in the database
 function log_in() {
+	const login_error = document.getElementById("login_error");
+
 	var user = localStorage.getItem('user');
 	var password = localStorage.getItem('password');
 
@@ -183,7 +185,15 @@ function log_in() {
 
 		logged_in();
 		alert("log in succesful");
+	} else {
+		login_error.textContent = "Username or password is wrong.";
 	}
+}
+
+
+// sel log error to be empty field (invisible)
+function reset_log_in_error() {
+	login_error.textContent = "";
 }
 
 
@@ -220,4 +230,6 @@ function logged_in() {
 	document.getElementById("ag_username_l").disabled = true;
 	document.getElementById("ag_passwd_l").disabled = true;
 	document.getElementById("logged_in").disabled = false;
+
+	reset_log_in_error();
 }
