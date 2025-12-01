@@ -48,14 +48,14 @@ function log_in() {
 
 
 function validate_form() {
-	const username = document.getElementById("ag_username").value;
+	const username = document.getElementById("ag_usernm").value;
 	const fname = document.getElementById("ag_fname").value;
 	const lname = document.getElementById("ag_lname").value;
 	const occupation = document.getElementById("ag_occupation").value;
 	const email = document.getElementById("ag_email").value;
 	const date = document.getElementById("ag_date").value;
-	const passwd = document.getElementById("ag_passwd").value;
-	const rpasswd = document.getElementById("ag_rpasswd").value;
+	const passwd = document.getElementById("ag_pass").value;
+	const rpasswd = document.getElementById("ag_rpass").value;
 	const agree = document.getElementById("ag_agree").checked;
 
 	const username_error = document.getElementById("username_error");
@@ -107,7 +107,7 @@ function validate_form() {
 		form_validity = false;
 	}
 
-	if (rpasswd == "" || rpasswd != passwd) {
+	if (rpasswd != passwd) {
 		rpasswd_error.textContent = "Passwords don't match.";
 		form_validity = false;
 	}
@@ -136,14 +136,24 @@ function save_data() {
 // 					"error_message07", "error_message08", "error_message09"];
 
 function reset_error() {
-	const error_list = ["username_error", "fname_error", "lname_error",
-						"occupation_error", "email_error", "date_error",
-						"passwd_error", "rpasswd_error", "agree_error"];
+	// const error_list = ["username_error", "fname_error", "lname_error",
+	// 					"occupation_error", "email_error", "date_error",
+	// 					"passwd_error", "rpasswd_error", "agree_error"];
+	//
+	// for (let i = 0; i < error_list.length; ++i) {
+	// 	// document.getElementById(error_list[i]).style.display = "none";
+	// 	error_list[i].textContent = "";
+	// }
 
-	for (let i = 0; i < error_list.length; ++i) {
-		// document.getElementById(error_list[i]).style.display = "none";
-		error_list[i].textContent = "";
-	}
+	username_error.textContent = "";
+	fname_error.textContent = "";
+	lname_error.textContent = "";
+	occupation_error.textContent = "";
+	email_error.textContent = "";
+	date_error.textContent = "";
+	passwd_error.textContent = "";
+	rpasswd_error.textContent = "";
+	agree_error.textContent = "";
 }
 
 
