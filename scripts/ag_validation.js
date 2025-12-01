@@ -1,6 +1,7 @@
 // andrei form validation script
 // public variable declaration
 
+check_log_in_status(localStorage.getItem('user'));
 insert_pop_up();
 
 function insert_pop_up() {
@@ -174,8 +175,27 @@ function log_in() {
 	if (user_login == user && password_login == password) {
 		alert("log in succesful");
 
-		document.getElementById("ag_loginBtn").textContent = user;
+		// persistent log in
+		localStorage.setItem('log_in_status', true);
+
+		// document.getElementById("ag_loginBtn").textContent = user;
+		check_log_in_status(user);
 	}
+}
+
+
+function check_log_in_status(user) {
+	if (localStorage.getItem('log_in_status') == "true") {
+		document.getElementById("ag_loginBtn").textContent = user;
+	} else {
+		document.getElementById("ag_loginBtn").textContent = "Log in";
+	}
+}
+
+
+function log_out() {
+	localStorage.setItem('log_in_status', false);
+	check_log_in_status(localStorage.getItem('user'));
 }
 
 
