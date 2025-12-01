@@ -49,14 +49,14 @@ function pop_up() {
 
 
 function validate_form() {
-	const username = document.getElementById("ag_usernm").value;
+	const username = document.getElementById("ag_username").value;
 	const fname = document.getElementById("ag_fname").value;
 	const lname = document.getElementById("ag_lname").value;
 	const occupation = document.getElementById("ag_occupation").value;
 	const email = document.getElementById("ag_email").value;
 	const date = document.getElementById("ag_date").value;
-	const passwd = document.getElementById("ag_pass").value;
-	const rpasswd = document.getElementById("ag_rpass").value;
+	const passwd = document.getElementById("ag_passwd").value;
+	const rpasswd = document.getElementById("ag_rpasswd").value;
 	const agree = document.getElementById("ag_agree").checked;
 
 	const username_error = document.getElementById("username_error");
