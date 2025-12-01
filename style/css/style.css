@@ -126,6 +126,7 @@ body {
 }
 
 .collapse .ag_loginBtn {
+  color: #00f2ff;
   margin-left: 2em;
   margin-right: 2em;
   float: right;

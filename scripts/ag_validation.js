@@ -1,12 +1,14 @@
 // andrei form validation script
-// public variable declaration
 
-check_log_in_status(localStorage.getItem('user'));
+// call these functions as soon as the page is open script initialized
 insert_pop_up();
+check_log_in_status(localStorage.getItem('user'));
 
+
+// sneakily inser tsome html into the page and hide it completely
 function insert_pop_up() {
 	var pop_up_html = `
-		<div id="overlay"></div>
+		<div id="overlay" onclick="hide_pop_up();"></div>
 		<div id="pop_up">
 			<label for="ag_username">Username:</label>
 			<br>
@@ -20,7 +22,11 @@ function insert_pop_up() {
 			<span id="login_error" class="error_message"></span>
 			<br>
 			<div class="ag_center">
-				<button onclick="log_in();">Log in</button>
+				<button onclick="log_in();" id="logged_out">Log in</button>
+				<button onclick="log_out();" id="logged_in">Log out</button>
+			</div>
+			<br>
+			<div class="ag_center">
 				<button type="reset" onclick="hide_pop_up();">Cancel</button>
 			</div>
 		</div>
@@ -31,24 +37,21 @@ function insert_pop_up() {
 }
 
 
+// make the login screen disappear
 function hide_pop_up() {
 	document.getElementById("overlay").style.display = "none";
 	document.getElementById("pop_up").style.display = "none";
 }
 
 
+// make the login screen appear
 function pop_up() {
 	document.getElementById("overlay").style.display = "block";
 	document.getElementById("pop_up").style.display = "block";
 }
 
 
-// function log_in() {
-// 	hide_pop_up();
-// }
-
-
-
+// get values of all inputs and make sure they meet the requirements, if not raise an error
 function validate_form() {
 	const username = document.getElementById("ag_username").value;
 	const fname = document.getElementById("ag_fname").value;
@@ -132,13 +135,7 @@ function validate_form() {
 }
 
 
-function save_data() {
-	// localStorage.setItem('user', username);
-	// localStorage.setItem('password', passwd);
-}
-
-
-
+// obsolete (failed attempt)
 function hide_error() {
 	// const error_list = ["error_message01", "error_message02", "error_message03",
 	// 					"error_message04", "error_message05", "error_message06",
@@ -153,6 +150,8 @@ function hide_error() {
 	}
 }
 
+
+// sel all errors to be empty fiels (invisible)
 function reset_error() {
 	username_error.textContent = "";
 	fname_error.textContent = "";
@@ -165,6 +164,8 @@ function reset_error() {
 	agree_error.textContent = "";
 }
 
+
+// get value from the inputs and make sure they match the values stored in the database
 function log_in() {
 	var user = localStorage.getItem('user');
 	var password = localStorage.getItem('password');
@@ -173,70 +174,50 @@ function log_in() {
 	var password_login = document.getElementById("ag_passwd_l").value;
 
 	if (user_login == user && password_login == password) {
-		alert("log in succesful");
-
 		// persistent log in
 		localStorage.setItem('log_in_status', true);
 
 		// document.getElementById("ag_loginBtn").textContent = user;
 		check_log_in_status(user);
+		hide_pop_up();
+
+		logged_in();
+		alert("log in succesful");
 	}
 }
 
 
+// if the log in status is true make sure the username is disabled
 function check_log_in_status(user) {
 	if (localStorage.getItem('log_in_status') == "true") {
 		document.getElementById("ag_loginBtn").textContent = user;
+
+		logged_in();
 	} else {
 		document.getElementById("ag_loginBtn").textContent = "Log in";
+
+		log_out();
 	}
 }
 
 
+// disable login pop up buttons
 function log_out() {
 	localStorage.setItem('log_in_status', false);
-	check_log_in_status(localStorage.getItem('user'));
+	// check_log_in_status(localStorage.getItem('user'));
+	document.getElementById("ag_loginBtn").textContent = "Log in";
+
+	document.getElementById("logged_in").disabled = true;
+	document.getElementById("logged_out").disabled = false;
+	document.getElementById("ag_username_l").disabled = false;
+	document.getElementById("ag_passwd_l").disabled = false;
 }
 
 
-
-
-// useless shtuff
-var sUserName,
-	targetElementMessage,
-	targetElementLogin,
-	targetElementMain,
-	targetElementBtm;
-
-function validateData() {
-	// assign id of certain tags to these variables
-	sUserName = document.getElementById("userName").value;
-	targetElementMessage = document.getElementById("message");
-	targetElementLogin = document.getElementById("loginScreen");
-	targetElementMain = document.getElementById("mainScreen");
-	targetElementBtn = document.getElementById("submitBtn");
-
-	// if the length of username is less than 3 then enable login button
-	if(sUserName.length > 2) {
-		// alert("ok");
-		targetElementBtn.disabled = false;
-	} else {
-		// alert("please provide a valid username");
-		targetElementBtn.disabled = true;
-	}
+// disable login pop up buttons
+function logged_in() {
+	document.getElementById("logged_out").disabled = true;
+	document.getElementById("ag_username_l").disabled = true;
+	document.getElementById("ag_passwd_l").disabled = true;
+	document.getElementById("logged_in").disabled = false;
 }
-
-function authenticate() {
-	// display a message with user's username and hide the login fields
-	targetElementMessage.innerHTML = "Hello " + sUserName + ", you are authenticated!";
-	targetElementLogin.style.display = "none";
-	targetElementMain.style.display = "block";
-}
-
-function logOut() {
-	// delete the greeting message and show the lgin fields
-	document.getElementById("userName").value = "";
-	targetElementLogin.style.display = "block";
-	targetElementMain.style.display = "none";
-}
-
