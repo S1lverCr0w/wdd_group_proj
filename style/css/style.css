@@ -13,11 +13,21 @@
   font-weight: 700;
   font-style: normal;
 }
+
+.font-jb {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 /* fonts end */
 
+/* debugging end */
 /* .row {
   border: 4px solid #333;
 } */
+/* debugging end */
 
 /*common tags ALL*/
 
@@ -104,25 +114,33 @@ body {
 #00ffba Highlights
 */
 /* andrei navbar customization start*/
+.ag_body .navbar-brand {
+  color: #A6F5C2;
+}
+
+.ag_body .navbar-brand:hover {
+  color: #00f2ff;
+}
+
 .ag_body nav {
   /* background-color:#4b4a4a; */
   background-color:#1e1e1e;
 }
 
 .ag_active {
-    background-color: #00f2ff;
+  background-color: #00f2ff;
 }
 
 .collapse .navBtn {
-    color: #cbd8d9;
-    /* margin: 0; */
-    /* padding: 0; */
+  color: #cbd8d9;
+  /* margin: 0; */
+  /* padding: 0; */
 }
 
 .collapse .navBtn:hover {
-    /* background-color: #A6F5C2; */
-    background-color: #060606;
-    /* color: black; */
+  /* background-color: #A6F5C2; */
+  background-color: #060606;
+  /* color: black; */
 }
 
 .collapse .ag_loginBtn {
@@ -144,6 +162,12 @@ body {
 
 .ag_body {
   color: black;
+  background-color: black;
+}
+
+.ag_body img {
+  /* height: auto; */
+  width: 80%;
 }
 
 .ag_col:hover {
@@ -151,7 +175,6 @@ body {
 }
 
 .ag_col {
-  /* gap: 1em; */
   border: 4px solid #333;
   /* background-color: #333; */
 }
@@ -174,8 +197,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background-color: #fff;
-  border: 4px solid #ccc;
+  background-color: #d1eaff;
+  border: 4px solid #333;
   z-index: 1000;
 }
 
@@ -198,6 +221,20 @@ body {
 .error_message {
   color: red;
 }
+
+/* input style start */
+.ag_body input {
+  color: black;
+  border: 2px solid #333;
+  /* background-color: #aaa; */
+  background-color: #f2fbff;
+}
+
+.pop_up button {
+  border: 2px solid #333;
+  background-color: #999;
+}
+/* input style end */
 
 /* Andrei G section end ################################# */
 

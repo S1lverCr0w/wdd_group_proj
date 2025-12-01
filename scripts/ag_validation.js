@@ -9,15 +9,15 @@ check_log_in_status(localStorage.getItem('user'));
 function insert_pop_up() {
 	var pop_up_html = `
 		<div id="overlay" onclick="hide_pop_up();"></div>
-		<div id="pop_up">
+		<div class="pop_up font-jb" id="pop_up">
 			<label for="ag_username">Username:</label>
 			<br>
-			<input type="text" id="ag_username_l" name="ag_username" placeholder="Enter your username" size="23">
+			<input type="text" id="ag_username_l" name="ag_username" placeholder="Enter your username" size="27">
 			<br>
 
 			<label for="ag_passwd">Password:</label>
 			<br>
-			<input type="password" id="ag_passwd_l" name="ag_passwd_l" placeholder="passsword" size="23">
+			<input type="password" id="ag_passwd_l" name="ag_passwd_l" placeholder="passsword" size="27">
 			<br>
 			<span id="login_error" class="error_message"></span>
 			<br>
