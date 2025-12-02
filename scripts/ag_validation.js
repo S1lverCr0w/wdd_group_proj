@@ -7,6 +7,8 @@ check_log_in_status(localStorage.getItem('user'));
 
 // sneakily inser tsome html into the page and hide it completely
 function insert_pop_up() {
+	// this html code has been borrowed from geeksforgeeks.org and class/id names have been modified to match mine
+	// https://www.geeksforgeeks.org/javascript/how-to-open-a-popup-on-click-using-javascript/
 	var pop_up_html = `
 		<div id="overlay" onclick="hide_pop_up();"></div>
 		<div class="pop_up font-jb" id="pop_up">
@@ -32,6 +34,8 @@ function insert_pop_up() {
 		</div>
 		`;
 
+	// this javascript method has been heavily inspired by DivyashC's answer on stack overflow
+	// https://stackoverflow.com/a/71291396
 	document.body.insertAdjacentHTML("afterbegin", pop_up_html);
 	hide_pop_up();
 }
@@ -54,6 +58,9 @@ function pop_up() {
 
 
 // get values of all inputs and make sure they meet the requirements, if not raise an error
+// this fucntion has been inspired by our lecturer's (Emer) sample formVAlidation() {}; function code for our web design lecture
+// the code has been heavily modified to use different class/id/function/method names and differend conditionals and operators
+// https://moodle2025.ncirl.ie/mod/folder/view.php?id=32568
 function validate_form() {
 	const username = document.getElementById("ag_username").value;
 	const fname = document.getElementById("ag_fname").value;
@@ -193,7 +200,7 @@ function log_in() {
 }
 
 
-// sel log error to be empty field (invisible)
+// set log error to be empty field (invisible)
 function reset_log_in_error() {
 	login_error.textContent = "";
 }
