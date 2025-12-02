@@ -23,13 +23,37 @@
 	</head>
 
 	<body class="ag_body">
-		<!-- navbar -->
-	    <script src="scripts/nav.js"></script>
+		<!-- navbar with insertAdjacentHTML method -->
+		<!-- <script src="scripts/nav.js"></script> -->
 
-		<!-- javascript -->
-		<script>
+		<!-- bootstrap navbar -->
+		<nav class="navbar navbar-expand-lg ag_navbar" role="navigation">
+			<div class="container-fluid">
+				<!-- branding -->
+				<a class="navbar-brand"  href="index.html">Group G |</a>
+				<!-- login menu -->
+				<!-- <button class="ag_login_icon" type="button"> -->
+				<!-- 	<span class="">Log in</span> -->
+				<!-- </button> -->
+				<!-- hamburger menu -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-		</script>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<!-- buttons in compact form -->
+					<a class="nav-link navBtn" href="index.html">Home</a>
+					<a class="nav-link navBtn" href="news.html">News</a>
+					<a class="nav-link navBtn" href="uisceire.html">UisceIRE</a>
+					<a class="nav-link navBtn" href="sources.html">Sources</a>
+					<a class="nav-link navBtn" href="conservation.html">Conservation</a>
+					<a class="nav-link navBtn" href="findus.html">Find Us</a>
+					<a class="nav-link navBtn" href="contact.html">Contact Us</a>
+					<a class="nav-link navBtn" href="info.html">Info</a>
+					<button class="nav-link navBtn ag_loginBtn" onclick="pop_up();" id="ag_loginBtn">Log in</button>
+				</div>
+			</div>
+		</nav>
 
 		<!-- body of the page -->
 		<div class="container text-center">
@@ -84,7 +108,7 @@
 					<p>images here coming soon</p>
 					<p>images here coming soon</p>
 					<p>images here coming soon</p>
-					<img src="style/images/ag_index_swan_couleur.jpg" alt="a swan in the water author:couleur">
+					<img src="style/images/ag_index_swan_couleur.jpg" alt="a swan in the water author:couleur pixabay.com">
 				</div>
 
 				<div class="col-sm-6 ag_col">
