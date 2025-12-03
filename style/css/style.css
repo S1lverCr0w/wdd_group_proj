@@ -14,13 +14,6 @@
   font-style: normal;
 }
 
-.font-jb {
-  font-family: "JetBrains Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
 /* fonts end */
 
 /* .row {
@@ -93,6 +86,14 @@ body {
 
 
 /* Andrei G section start ################################# */
+
+.n_font-jb {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 /* andrei navbar customization start*/
 .ag_body .navbar-brand {
   color: #A6F5C2;
@@ -147,7 +148,8 @@ body {
 
 .ag_body img {
   /* height: auto; */
-  width: 80%;
+  width: 100%;
+  object-fit: fill;
 }
 
 .ag_col:hover {
