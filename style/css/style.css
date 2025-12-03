@@ -35,7 +35,7 @@
 
 .navBtn {
   /* background-color: #333; */
-  color:  #040968;
+  color:  #cbd8d9;
   margin: 0;
   padding: 0;
   /* padding: 14px 16px; */
@@ -78,7 +78,7 @@ ul li a:hover {
 
 
 body {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/background2.avif"); 
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/background2.avif");
 	background-size: cover;
  /* background-color: lightgreen; */
 }
@@ -283,7 +283,7 @@ body {
   color: white;
 }
 /*
-   for hero sections 
+   for hero sections
 */
 .section-dark {
     background-color: var(--color-primary-dark);
@@ -291,7 +291,7 @@ body {
     padding: 4rem 0; /* Vertical padding for breathing room */
 }
 .section-dark h2, .section-dark h3 {
-    color: var(--color-accent-light); 
+    color: var(--color-accent-light);
 }
 
 /* Image Overlays/Captions:
@@ -305,11 +305,11 @@ body {
 .modal {
 	display: none; /* Hidden by default */
 	position: relative; /* Stay in place */
-	z-index: 1; 
+	z-index: 1;
 	left: 0;
 	top: 0;
-	width: 100%; 
-	height: 100%; 
+	width: 100%;
+	height: 100%;
 	overflow: auto;
 	/* background-image: url("../images/background2.avif"); */
 	background-color: #3ABEF9;
@@ -350,7 +350,7 @@ body {
 	text-decoration: none;
 	cursor: pointer;
 }
-		
+
 /* Derek o K section end */
 
 /* Tristan section start */
@@ -365,11 +365,11 @@ body {
 }
 
 .well-image{
-	border-radius: 10px; 
-	padding: 10px; 
+	border-radius: 10px;
+	padding: 10px;
 	height: 70%;
 }
-	
+
 
 body.consv{
 	background-image: url("../images/vividblue.jpg");
@@ -379,7 +379,7 @@ body.consv{
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
-} 
+}
 
 .bbh-sans{
   font-family: "BBH Sans Bartle", sans-serif;
@@ -397,6 +397,3 @@ body.consv{
   font-style: normal;
 }
 /* Tristan section end */
-
-
-
