@@ -59,9 +59,9 @@ function pop_up() {
 
 // get values of all inputs and make sure they meet the requirements, if not raise an error
 // this fucntion has been inspired by our lecturer's (Emer) sample formVAlidation() {}; function code for our web design lecture
-// the code has been heavily modified to use different class/id/function/method names and differend conditionals and operators
-// https://moodle2025.ncirl.ie/mod/folder/view.php?id=32568
 function validate_form() {
+	// declare som constant variables as they will not be changing in this function
+	// user input should not change during the time this function is running
 	const username = document.getElementById("ag_username").value;
 	const fname = document.getElementById("ag_fname").value;
 	const lname = document.getElementById("ag_lname").value;
@@ -84,8 +84,10 @@ function validate_form() {
 
 	reset_error();
 
+	// boolea variable that will return false if even one conditional is true
 	let form_validity = true;
 
+	// check if the username is not empty and the length is longer than 3
 	if (username == "" || username.length < 3) {
 		username_error.textContent = "Please enter a valid username.";
 		form_validity = false;
@@ -106,6 +108,7 @@ function validate_form() {
 		form_validity = false;
 	}
 
+	// check if the email field has '@' && '.' symbols
 	if (!email.includes("@") || !email.includes(".")) {
 		email_error.textContent = "Please enter a valid email address.";
 		form_validity = false;
@@ -149,6 +152,8 @@ function hide_error() {
 	// const error_list = ["error_message01", "error_message02", "error_message03",
 	// 					"error_message04", "error_message05", "error_message06",
 	// 					"error_message07", "error_message08", "error_message09"];
+
+	// array to loop through and throw error messages when the field is empty
 	const error_list = ["username_error", "fname_error", "lname_error",
 						"occupation_error", "email_error", "date_error",
 						"passwd_error", "rpasswd_error", "agree_error"];
@@ -162,6 +167,7 @@ function hide_error() {
 
 // sel all errors to be empty fiels (invisible)
 function reset_error() {
+	// set all the error fields to be empty/invisible
 	username_error.textContent = "";
 	fname_error.textContent = "";
 	lname_error.textContent = "";
@@ -184,6 +190,7 @@ function log_in() {
 	var user_login = document.getElementById("ag_username_l").value;
 	var password_login = document.getElementById("ag_passwd_l").value;
 
+	// if the user input matches the details stored in the sql database then run the following functions/methods
 	if (user_login == user && password_login == password) {
 		// persistent log in
 		localStorage.setItem('log_in_status', true);
