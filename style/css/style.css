@@ -49,7 +49,7 @@
     color: black;
 }
 
-ul {
+footer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -58,11 +58,11 @@ ul {
   margin-bottom: 0.8em;
 }
 
-ul li {
+footer ul li {
   float: none;
 }
 
-ul li a {
+footer ul li a {
   display: block;
   color: white;
   text-decoration: none;
@@ -70,7 +70,7 @@ ul li a {
   padding: 14px 16px;
 }
 
-ul li a:hover {
+footer ul li a:hover {
   background-color: #111;
 }
 
@@ -162,6 +162,11 @@ body {
 
 .ag_h1, .ag_h2, .ag_h3, .ag_h4, .ag_h5, .ag_h6 {
   color: black;
+}
+
+.ag_body .ag_p {
+  /* color: red; */ /* for debugging purposes */
+  font-size: 1.2rem;
 }
 
 /* login overlay andrei */
