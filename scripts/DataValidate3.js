@@ -45,36 +45,26 @@ function checkLoginStatus() {
 
 
 
-function authenticate(){
+function authenticate() {
+    // 1. Get the value directly from the input (CORRECTED)
+    // 2. Extra Safety Check: If somehow an invalid email got here, stop.	
+	 // 3. Save to storage (Replaced 'currentUserName' with 'sUserName')
+	// 4. Update the Message
+	// 5. Hide Login Screen
+	// 6. Show Main Screen
+	
+	
+	
+	sUserName = targetElementInput.value;
     
-     //simple regex pattern for basic email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
-    
-    // Get the current value
-    sUserName = targetElementInput.value;
-		
-    // Test if the current value matches the email pattern
-    if(emailPattern.test(sUserName)){
-        // If it looks like an email, enable the button
-        targetElementBtn.disabled = false;
-    } else {
-        // If it does not look like an email, disable the button
-        targetElementBtn.disabled = true;
+    if (!emailPattern.test(sUserName)) {
+        alert("Please enter a valid email first.");
+        return; // This stops the function if email is bad
     }
-}
   
-	  // 1. Get the latest value directly from the input element
-     // 2. Validate the value (Safety check)
-    // 3. Update the global variable
-   // 4. Save the username to localStorage
-  // 5. Perform UI update on the message element
- // 6. Hide the login screen, but ONLY if the element exists
-// 7. Show the main screen, but ONLY if the element exists
-  
-    sUserName = currentUserName;
     localStorage.setItem('username', sUserName); 
-
-      
+  
     if (targetElementMessage) {
         targetElementMessage.innerHTML = "Hello " + sUserName + ", you are authenticated";
     }
